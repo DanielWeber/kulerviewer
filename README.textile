@@ -1,0 +1,25 @@
+h3. What's this?
+
+This is a _very_ simple (regarding features and implementation) SWT viewer for Adobe ASE files created by "kuler":http://kuler.adobe.com/ [1]. It has not been tested with .ase files from other sources. All I wanted to achieve was to have an easy way of 'reading' downloaded .ase files with a free application.
+
+The implementation bases on the description of the .ase file format povided by "Carl Camera":http://iamacamera.org/default.aspx?id=109 .
+
+h3. How do I use it?
+
+It accepts a single command line parameter, an .ase file:
+
+
+pre. java -jar kulerviewer.jar myTheme.ase
+
+When run, it will open up a dialog displaying all colors [2] described in the .ase file.
+
+If no file is specified, an empty dialog will be shown.
+
+Once open, you can also drag and drop .ase files to the dialog, which will then be updated to show the contents of that .ase file.
+
+Right-clicking on one of the colors will copy the hex-code representing the same RGB color to the clipboard so that you can paste it somewhere, e.g. into a css file.
+
+fn1. "kuler":http://kuler.adobe.com/ is a web application provided by Adobe which allows to create and share color themes.
+
+fn2. Currently, only RGB coded colors are supported. Neither CMYK nor any of the other formats that may occur in .ase files are supported.
+
